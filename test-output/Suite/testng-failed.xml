@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="TestRegistration11(failed)">
+    <parameter name="userName6" value=""/>
+    <parameter name="userName7" value="jain3"/>
+    <parameter name="userName8" value="jain4"/>
+    <parameter name="password8" value="123456"/>
+    <parameter name="password7" value="123"/>
+    <parameter name="password6" value="123456"/>
+    <parameter name="password5" value="123456"/>
+    <parameter name="email8" value="jain8yahoo.com"/>
+    <parameter name="email7" value="jain7@yahoo.com"/>
+    <parameter name="email6" value="jain6@yahoo.com"/>
+    <parameter name="email5" value="jain5@yahoo.com"/>
+    <parameter name="message26" value="|||RegTest_06 passed : Registration failed : Error message is displayed"/>
+    <parameter name="message25" value="Test Case- Fail- Registration unsuccessful"/>
+    <parameter name="message8" value="RegTest_08 fail- Registration successful"/>
+    <parameter name="message7" value="|||RegTest_07 fail : Registration successful"/>
+    <parameter name="message28" value="|||RegTest_08 passed : Registration failed : Error message is displayed"/>
+    <parameter name="message27" value="|||RegTest_07 passed : Registration failed : Error message is displayed"/>
+    <parameter name="TestCase8" value="Verify that in registration page Email must content @  Symbol validation "/>
+    <parameter name="ExpectedTitle8" value="Gatherly Social Network | Register"/>
+    <parameter name="TestCase7" value="Verify that in registration page password must content atleast 6 character validation "/>
+    <parameter name="TestCase6" value="Verify the registration without username error is displayed"/>
+    <parameter name="TestCase5" value="Verify the valid Registration"/>
+    <parameter name="message6" value="|||RegTest_06 fail : Registration successful"/>
+    <parameter name="userName5" value="jain1"/>
+    <parameter name="message5" value="|||Test Case- Passed- Registration Successful"/>
+    <parameter name="ExpectedTitle5" value="Gatherly Social Network | Register"/>
+    <parameter name="ExpectedTitle7" value="Gatherly Social Network | Register"/>
+    <parameter name="ExpectedTitle6" value="Gatherly Social Network | Register"/>
+    <classes>
+      <class name="test.register.Test1Registration">
+        <methods>
+          <include name="afterTest"/>
+          <include name="RegTest_02"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- test.register.Test1Registration -->
+      <class name="test.register.Test2Registration">
+        <methods>
+          <include name="RegTest_08" invocation-numbers="0"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="RegTest_06" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- test.register.Test2Registration -->
+      <class name="test.register.TestRegistration3">
+        <methods>
+          <include name="afterTest"/>
+          <include name="RegTest_09" invocation-numbers="0 1"/>
+          <include name="RegTest_11"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- test.register.TestRegistration3 -->
+    </classes>
+  </test> <!-- TestRegistration11(failed) -->
+</suite> <!-- Failed suite [Suite] -->

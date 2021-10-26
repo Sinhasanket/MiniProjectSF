@@ -1,0 +1,449 @@
+<html>
+<head>
+<title>TestNG:  TestRegistration11</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>TestRegistration11</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/6/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Sep 23 12:07:04 IST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>69 seconds (69113 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.register.Test2Registration.RegTest_06()'><b>RegTest_06</b><br>Test class: test.register.Test2Registration<br>Parameters: Verify the registration without username error is displayed, Gatherly Social Network | Register, jain6@yahoo.com, , 123456, |||RegTest_06 fail : Registration successful, |||RegTest_06 passed : Registration failed : Error message is displayed<br/>
+<a href="#Output-1420623741" onClick='toggleBox("Output-1420623741", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1420623741" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1420623741">
+Test - Verify the registration without username error is displayed|||<br/>
+|||RegTest_06 passed : Registration failed : Error message is displayed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Failed to register
+	at test.register.Test2Registration.RegTest_05(Test2Registration.java:46)
+	at test.register.Test2Registration.RegTest_06(Test2Registration.java:56)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1420623741", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1420623741'><pre>java.lang.AssertionError: Failed to register
+	at org.testng.Assert.fail(Assert.java:99)
+	at test.register.Test2Registration.RegTest_05(Test2Registration.java:46)
+	at test.register.Test2Registration.RegTest_06(Test2Registration.java:56)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>test.register.Test2Registration@1af2d44a</td></tr>
+<tr>
+<td title='test.register.Test1Registration.RegTest_02()'><b>RegTest_02</b><br>Test class: test.register.Test1Registration<br/>
+<a href="#Output-2128961136" onClick='toggleBox("Output-2128961136", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2128961136" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2128961136">
+Verify that Gatherly background color is blue||||<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [rgb(31, 182, 255)] but found [rgba(31, 182, 255, 1)]
+	at test.register.Test1Registration.RegTest_02(Test1Registration.java:44)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2128961136", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2128961136'><pre>java.lang.AssertionError: expected [rgb(31, 182, 255)] but found [rgba(31, 182, 255, 1)]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at test.register.Test1Registration.RegTest_02(Test1Registration.java:44)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>test.register.Test1Registration@48f278eb</td></tr>
+<tr>
+<td title='test.register.TestRegistration3.RegTest_09()'><b>RegTest_09</b><br>Test class: test.register.TestRegistration3<br>Parameters:  Verify that in registration page Email must content Mail server address after @  Symbol validation is applied , Gatherly Social Network | Register, rajika5@, Raji5, qwerty12345, RegTest_09- failed - Registration successful, RegTest_09 Failed : Registration failed : Error message is not displayed :Validation may applied but error pop up is not displayed<br/>
+<a href="#Output-1536478396" onClick='toggleBox("Output-1536478396", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1536478396" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1536478396">
+Test -  Verify that in registration page Email must content Mail server address after @  Symbol validation is applied |||<br/>
+RegTest_09 Failed : Registration failed : Error message is not displayed :Validation may applied but error pop up is not displayed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Failed to register
+	at test.register.TestRegistration3.RegTest_09(TestRegistration3.java:60)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1536478396", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1536478396'><pre>java.lang.AssertionError: Failed to register
+	at org.testng.Assert.fail(Assert.java:99)
+	at test.register.TestRegistration3.RegTest_09(TestRegistration3.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>8</td>
+<td>test.register.TestRegistration3@18d87d80</td></tr>
+<tr>
+<td title='test.register.Test2Registration.RegTest_08()'><b>RegTest_08</b><br>Test class: test.register.Test2Registration<br>Parameters: Verify that in registration page Email must content @  Symbol validation , Gatherly Social Network | Register, jain8yahoo.com, jain4, 123456, RegTest_08 fail- Registration successful, |||RegTest_08 passed : Registration failed : Error message is displayed<br/>
+<a href="#Output-1277678493" onClick='toggleBox("Output-1277678493", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1277678493" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1277678493">
+Test - Verify that in registration page Email must content @  Symbol validation |||<br/>
+|||RegTest_08 passed : Registration failed : Error message is displayed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Failed to register
+	at test.register.Test2Registration.RegTest_05(Test2Registration.java:46)
+	at test.register.Test2Registration.RegTest_08(Test2Registration.java:74)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1277678493", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1277678493'><pre>java.lang.AssertionError: Failed to register
+	at org.testng.Assert.fail(Assert.java:99)
+	at test.register.Test2Registration.RegTest_05(Test2Registration.java:46)
+	at test.register.Test2Registration.RegTest_08(Test2Registration.java:74)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>test.register.Test2Registration@1af2d44a</td></tr>
+<tr>
+<td title='test.register.TestRegistration3.RegTest_11()'><b>RegTest_11</b><br>Test class: test.register.TestRegistration3<br/>
+<a href="#Output-2082232630" onClick='toggleBox("Output-2082232630", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2082232630" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2082232630">
+Test -  Verify that error message is displayed when password and confirm password does not match|||<br/>
+RegTest_10 Failed : Registration failed : Error message is not displayed :Validation may applied but error pop up is not displayed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Failed to register
+	at test.register.TestRegistration3.RegTest_11(TestRegistration3.java:91)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2082232630", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2082232630'><pre>java.lang.AssertionError: Failed to register
+	at org.testng.Assert.fail(Assert.java:99)
+	at test.register.TestRegistration3.RegTest_11(TestRegistration3.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>7</td>
+<td>test.register.TestRegistration3@18d87d80</td></tr>
+<tr>
+<td title='test.register.TestRegistration3.RegTest_09()'><b>RegTest_09</b><br>Test class: test.register.TestRegistration3<br>Parameters: Verify that in registrationpage Email must content " . " Symbol validation is applied , Gatherly Social Network | Register, rajika6@emailcom, Raji6, qwerty12345, RegTest_10-failed - Registration successful, RegTest_10 Failed : Registration failed : Error message is not displayed :Validation may applied but error pop up is not displayed<br/>
+<a href="#Output-351520508" onClick='toggleBox("Output-351520508", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-351520508" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-351520508">
+Test - Verify that in registrationpage Email must content " . " Symbol validation is applied |||<br/>
+RegTest_10 Failed : Registration failed : Error message is not displayed :Validation may applied but error pop up is not displayed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Failed to register
+	at test.register.TestRegistration3.RegTest_09(TestRegistration3.java:60)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace351520508", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace351520508'><pre>java.lang.AssertionError: Failed to register
+	at org.testng.Assert.fail(Assert.java:99)
+	at test.register.TestRegistration3.RegTest_09(TestRegistration3.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>6</td>
+<td>test.register.TestRegistration3@18d87d80</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.register.Test1Registration.RegTest_03()'><b>RegTest_03</b><br>Test class: test.register.Test1Registration<br/>
+<a href="#Output-1944138464" onClick='toggleBox("Output-1944138464", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1944138464" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1944138464">
+Verify the registration frame title |||<br/>
+Registration frame title is : Register<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test.register.Test1Registration@48f278eb</td></tr>
+<tr>
+<td title='test.register.Test1Registration.RegTest_01()'><b>RegTest_01</b><br>Test class: test.register.Test1Registration<br/>
+<a href="#Output-274100821" onClick='toggleBox("Output-274100821", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-274100821" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-274100821">
+RegTest_01-Verify the registration page title.|||<br/>
+Test Case Output: Gatherly Social Network | Register<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>test.register.Test1Registration@48f278eb</td></tr>
+<tr>
+<td title='test.register.Test2Registration.RegTest_07()'><b>RegTest_07</b><br>Test class: test.register.Test2Registration<br>Parameters: Verify that in registration page password must content atleast 6 character validation , Gatherly Social Network | Register, jain7@yahoo.com, jain3, 123, |||RegTest_07 fail : Registration successful, |||RegTest_07 passed : Registration failed : Error message is displayed<br/>
+<a href="#Output-886004375" onClick='toggleBox("Output-886004375", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-886004375" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-886004375">
+Test - Verify that in registration page password must content atleast 6 character validation |||<br/>
+|||RegTest_07 fail : Registration successful<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>test.register.Test2Registration@1af2d44a</td></tr>
+<tr>
+<td title='test.register.Test1Registration.RegTest_04()'><b>RegTest_04</b><br>Test class: test.register.Test1Registration<br/>
+<a href="#Output-1800605369" onClick='toggleBox("Output-1800605369", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1800605369" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1800605369">
+Verify that Already have an account hyperlink is present and it is redirected to the login page.|||<br/>
+Test Case Output: Already have an account<br/>
+ |||RegTest_04 Link is present and redirected to correct url<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>test.register.Test1Registration@48f278eb</td></tr>
+<tr>
+<td title='test.register.Test2Registration.RegTest_05()'><b>RegTest_05</b><br>Test class: test.register.Test2Registration<br>Parameters: Verify the valid Registration, Gatherly Social Network | Register, jain5@yahoo.com, jain1, 123456, |||Test Case- Passed- Registration Successful, Test Case- Fail- Registration unsuccessful<br/>
+<a href="#Output-44278425" onClick='toggleBox("Output-44278425", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-44278425" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-44278425">
+Test - Verify the valid Registration|||<br/>
+|||Test Case- Passed- Registration Successful<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>test.register.Test2Registration@1af2d44a</td></tr>
+</table><p>
+</body>
+</html>
