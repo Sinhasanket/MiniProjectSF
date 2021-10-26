@@ -37,5 +37,4 @@ public class HomePageTest extends TestBase{
 	public void afterMethod() {
 		driver.quit();
 	}
-
 }
