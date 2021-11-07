@@ -1,7 +1,5 @@
 package utilities;
 
-import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
@@ -152,11 +150,11 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	@Override
 	public void onException(Throwable throwable, WebDriver driver) {
 		// TODO Auto-generated method stub
-		try {
-			TestUtils.takeScreenshotAtEndOfTest();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			TestUtils.takeScreenshotAtEndOfTest();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 	@Override
@@ -181,27 +179,5 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	public void afterGetText(WebElement element, WebDriver driver, String text) {
 		// TODO Auto-generated method stub
 		
-	}
-	
-	public void printTestCase(String testcase){
-		System.out.println("________________________________________________");
-		System.out.println(testcase);
-	}
-	
-	public void printResult(String title, String status) {
-		System.out.println("Component under test: " +title);
-    	System.out.println("Test case status: "+status);
-    	System.out.println("__________________________________________________");
-	}
-	
-	public void printResult(String title, String status,String message) {
-		System.out.println("Component under test: " +title);
-    	System.out.println("Test case status: "+status);
-    	System.out.println("Message :"+message);
-	}
-	
-	public void printMessage(String message)
-	{
-		System.out.println(message);
 	}
 }

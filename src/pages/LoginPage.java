@@ -36,10 +36,10 @@ public class LoginPage extends TestBase{
 		return password;
 	}
 	
-	public HomePage login(String e, String pwd) {
+	public ContactPage login(String e, String pwd) {
 		email.sendKeys(e);
 		password.sendKeys(pwd);
 		signin.click();
-		return new HomePage();
+		return new ContactPage();
 	}
 }

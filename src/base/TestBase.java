@@ -8,9 +8,12 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import utilities.Log;
 import utilities.TestUtils;
 import utilities.WebEventListener;
 
@@ -36,16 +39,25 @@ public class TestBase {
 	public static void initialization(){
 		String browserName = prop.getProperty("browser");
 		
-		if(browserName.equals("chrome")){
-			
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\sanket_sinha\\eclipse-workspace\\mini8x8Project\\src\\resources\\chromedriver.exe");	
-			driver = new ChromeDriver(); 
+		switch(browserName) {
+			case "chrome":
+				System.setProperty("webdriver.chrome.driver", TestUtils.CHROME_BROWSER);	
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--disable-notifications");
+				driver = new ChromeDriver(options); 
+				break;
+				
+			case "FF":
+				System.setProperty("webdriver.gecko.driver", TestUtils.FIREFOX_BROWSER);	
+				driver = new FirefoxDriver(); 
+				break;
+				
+			case "Edge":
+				System.setProperty("webdriver.edge.driver", TestUtils.EDGE_BROWSER);
+				driver = new EdgeDriver();
+				break;
 		}
-		else if(browserName.equals("FF")){
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\sanket_sinha\\eclipse-workspace\\mini8x8Project\\src\\resources\\geckodriver.exe");	
-			driver = new FirefoxDriver(); 
-		}
-		
+				
 		eventDriver = new EventFiringWebDriver(driver);
 		eventListener = new WebEventListener();
 		eventDriver.register(eventListener);
@@ -53,9 +65,9 @@ public class TestBase {
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(TestUtils.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtils.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
 		driver.get(prop.getProperty("url"));	
+		Log.info("initialization done");
 	}
 }
