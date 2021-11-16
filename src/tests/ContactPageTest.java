@@ -29,7 +29,7 @@ public class ContactPageTest extends TestBase{
 		ContactPage.verifyTitleShopperStop();
 	}
 
-	@Test
+	@Test(priority=2)
 	public void searchContacts() throws Exception{
 		ContactPage.searchContacts();
 	}
